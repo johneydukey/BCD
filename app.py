@@ -7,7 +7,7 @@ import colorsys
 from PIL import Image
 import io
 import imageio
-class_file_name = "./custom.names"
+class_file_name = "/custom.names"
 #original_image = cv2.imread(image_path) 
  
  
@@ -101,7 +101,7 @@ def count_objects(data, by_class = True, allowed_classes =list(read_class_names(
  
     # if by_class = True then count objects per class
     if by_class:
-        class_names = read_class_names("./custom.names")
+        class_names = read_class_names("/custom.names")
  
         # loop through total number of objects found
         for i in range(num_objects):
@@ -117,7 +117,7 @@ def count_objects(data, by_class = True, allowed_classes =list(read_class_names(
     return counts
 @st.cache(allow_output_mutation= True)
 def load_model():
-  loaded = tf.saved_model.load("./new")
+  loaded = tf.saved_model.load("/new")
   return loaded 
 loaded = load_model()
 #infer = loaded.signatures["serving_default"]  

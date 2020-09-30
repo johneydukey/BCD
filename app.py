@@ -101,7 +101,7 @@ def count_objects(data, by_class = True, allowed_classes =list(read_class_names(
  
     # if by_class = True then count objects per class
     if by_class:
-        class_names = read_class_names("/content/drive/My Drive/custom.names")
+        class_names = read_class_names("./custom.names")
  
         # loop through total number of objects found
         for i in range(num_objects):
